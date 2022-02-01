@@ -1,0 +1,133 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+:root {
+  --Bright-Orange: hsl(31, 77%, 52%);
+  --Dark-Cyan: hsl(184, 100%, 22%);
+  --Very-Dark-Cyan: hsl(179, 100%, 13%);
+  --Transparent-White: hsla(0, 0%, 100%, 0.75); /*Paragraphs*/
+  --Very-Light-Gray: hsl(0, 0%, 95%); /*background, headings, buttons)*/
+}
+body {
+  font-family: "Big Shoulders Display", cursive;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
+.main {
+  width: 375px;
+  background: var(--Very-Light-Gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-grid {
+  display: grid;
+  background: var(--Very-Light-Gray);
+  margin: 40px 30px 40px 30px;
+  align-self: center;
+  border-radius: 3%;
+}
+.box-1 {
+  background: var(--Bright-Orange);
+  padding: 20px 20px 20px 20px;
+}
+.box-2 {
+  background: var(--Dark-Cyan);
+  padding: 20px 20px 20px 20px;
+}
+.box-3 {
+  background: var(--Very-Dark-Cyan);
+  padding: 20px 20px 20px 20px;
+}
+.h1 {
+  color: var(--Very-Light-Gray);
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.paragraph {
+  color: var(--Transparent-White);
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+}
+.button {
+  background-color: var(--Very-Light-Gray);
+  border-radius: 20%;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.button-1 {
+  color: var(--Bright-Orange);
+}
+.button-1:hover {
+  background-color: var(--Bright-Orange);
+  color: var(--Transparent-White);
+  border: 2px solid var(--Transparent-White);
+}
+.button-2 {
+  color: var(--Dark-Cyan);
+}
+.button-2:hover {
+  background-color: var(--Dark-Cyan);
+  color: var(--Transparent-White);
+  border: 2px solid var(--Transparent-White);
+}
+.button-3 {
+  color: var(--Very-Dark-Cyan);
+}
+.button-3:hover {
+  background-color: var(--Very-Dark-Cyan);
+  color: var(--Transparent-White);
+  border: 2px solid var(--Transparent-White);
+}
+
+.image {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  /* For desktop: */
+
+  .main {
+    width: 100%;
+    background: var(--Very-Light-Gray);
+  }
+
+  .container-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    margin: 200px 300px 100px 300px;
+  }
+}
